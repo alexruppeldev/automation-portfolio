@@ -1,0 +1,11 @@
+flowchart LR
+  A[Freitext Eingabe] --> B[AI Lead Extraktion]
+  B --> C[JSON sicher parsen]
+  C --> D[CRM Mapping vorbereiten]
+  D --> E[OAuth Token holen]
+  E --> F[Lead suchen]
+  F -->|vorhanden| G[Duplikat Hinweis]
+  F -->|nicht vorhanden| H[Kontakt suchen]
+  H -->|vorhanden| G
+  H -->|nicht vorhanden| I[Lead erstellen]
+  I --> J[Ergebnis anzeigen]

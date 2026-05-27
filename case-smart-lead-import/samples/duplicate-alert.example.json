@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "duplicate": true,
+  "type": "lead",
+  "message": "Ein Lead mit diesen Daten ist bereits vorhanden. Es wurde kein neuer Lead angelegt.",
+  "existing_record": {
+    "id": "demo-existing-lead-id",
+    "module": "Lead",
+    "first_name": "Max",
+    "last_name": "Mustermann",
+    "account_name": "Muster Immobilien GmbH",
+    "email1": "max.mustermann@example.com",
+    "phone_work": "+49 911 123456"
+  }
+}

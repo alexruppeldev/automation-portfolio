@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "data": {
+    "status": "ready_for_import",
+    "lead": {
+      "first_name": "Max",
+      "last_name": "Mustermann",
+      "account_name": "Muster Immobilien GmbH",
+      "title": "Kundenberater Immobilien",
+      "email1": "max.mustermann@example.com",
+      "phone_work": "+49 911 123456",
+      "primary_address_city": "Nürnberg",
+      "interest": "CRM Automatisierung und Beratungstermin",
+      "lead_source": "Web Site",
+      "lead_source_description": "Smart Lead Import Demo"
+    },
+    "quality": {
+      "missing_fields": [],
+      "confidence_note": "AI Ergebnis ist vollständig genug für einen CRM Import."
+    }
+  }
+}

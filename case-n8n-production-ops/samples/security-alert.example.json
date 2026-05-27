@@ -1,0 +1,9 @@
+{
+  "status": "alert",
+  "source": "github-security-advisories",
+  "advisoryId": "GHSA-demo-1234",
+  "package": "n8n",
+  "severity": "high",
+  "message": "New relevant advisory detected. Review required."
+}
+

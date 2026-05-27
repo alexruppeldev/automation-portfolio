@@ -1,0 +1,18 @@
+{
+  "status": "ready_for_crm_review",
+  "lead": {
+    "firstName": "Max",
+    "lastName": "Mustermann",
+    "company": "Muster Immobilien GmbH",
+    "jobTitle": "Kundenberater Immobilien",
+    "email": "max.mustermann@example.com",
+    "phone": "+49 911 123456",
+    "city": "Nuernberg",
+    "interest": "CRM Automatisierung und Beratungstermin",
+    "notes": "Moechte einen Beratungstermin vereinbaren."
+  },
+  "quality": {
+    "missingFields": [],
+    "confidenceNote": "AI Ergebnis ist vollstaendig genug fuer CRM Pruefung."
+  }
+}

@@ -1,0 +1,17 @@
+# n8n / workflow exports
+workflow.json
+workflow.demo.json
+n8n_backup_*.json
+*.backup.json
+
+# secrets / env
+.env
+.env.*
+*.key
+*.pem
+credentials*.json
+secrets*.json
+
+# local files
+.DS_Store
+Thumbs.db

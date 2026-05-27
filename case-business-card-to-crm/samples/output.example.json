@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "result_text": "VISITENKARTE 1\n================\nName: Max Mustermann\nTitel: Kundenberater Immobilien\nE-Mail: info@mustermann.de\nMobil: +491234567890\nBüro: +4933344441403\nFax: +493334444231403\nWeb: www.mustermann.de\nAdresse: Muster Straße 31, 14330 Musterstadt",
+  "card": {
+    "firma": "Muster Immobilien GmbH",
+    "vorname": "Max",
+    "nachname": "Mustermann",
+    "job_titel": "Kundenberater Immobilien",
+    "email": "info@mustermann.de",
+    "telefon_mobil": "+491234567890",
+    "telefon_buero": "+4933344441403",
+    "telefax": "+493334444231403",
+    "webseite": "www.mustermann.de",
+    "adresse_strasse": "Muster Straße 31",
+    "adresse_plz": "14330",
+    "adresse_stadt": "Musterstadt",
+    "adresse_land": null,
+    "source": "ai_business_card_scan",
+    "confidence_note": "AI OCR Ergebnis, vor CRM Erstellung prüfbar"
+  },
+  "count": 1,
+  "errors": []
+}

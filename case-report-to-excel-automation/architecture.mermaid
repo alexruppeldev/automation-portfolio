@@ -1,0 +1,9 @@
+flowchart LR
+  A[Upload Oberfläche] --> B[CSV Reportdaten senden]
+  B --> C[Eingabe normalisieren]
+  C --> D[Excel Vorlage lesen]
+  D --> E[CSV Zeilen vorbereiten]
+  E --> F[Excel Datei befüllen]
+  F --> G[CRM Dokument anlegen]
+  G --> H[Datei hochladen]
+  H --> I[Callback senden]

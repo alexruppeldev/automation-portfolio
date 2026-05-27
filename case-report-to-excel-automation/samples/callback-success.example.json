@@ -1,0 +1,8 @@
+{
+  "correlationId": "req_demo_2026_0001",
+  "status": "success",
+  "documentId": "doc_demo_12345",
+  "fileName": "monthly-report-demo.xlsx",
+  "message": "Generated report was uploaded to CRM."
+}
+

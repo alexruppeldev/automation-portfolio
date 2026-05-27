@@ -1,0 +1,13 @@
+{
+  "ok": false,
+  "requestId": "lead_import_demo_0002",
+  "validation": {
+    "status": "needs_manual_review",
+    "missingFields": [
+      "email",
+      "company"
+    ]
+  },
+  "message": "Input could not be converted into a CRM-ready lead."
+}
+

@@ -1,0 +1,8 @@
+{
+  "status": "success",
+  "backupId": "backup_demo_2026_05_02",
+  "workflowCount": 62,
+  "destination": "restricted-storage",
+  "message": "Daily n8n backup completed."
+}
+

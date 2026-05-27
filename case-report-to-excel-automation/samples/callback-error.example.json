@@ -1,0 +1,7 @@
+{
+  "correlationId": "req_demo_2026_0001",
+  "status": "error",
+  "errorCode": "TEMPLATE_MAPPING_FAILED",
+  "message": "The report could not be generated with the selected template."
+}
+

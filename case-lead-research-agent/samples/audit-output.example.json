@@ -1,0 +1,102 @@
+[
+  {
+    "Bucket": "Accepted",
+    "Filter_Stufe": "",
+    "Ausgeschlossen_Grund": "",
+    "Firmenname": "Demo Anlagenbau GmbH",
+    "CRM_Fit_Score": 9,
+    "AI_Status": "ok",
+    "Metric": "",
+    "Value": ""
+  },
+  {
+    "Bucket": "Accepted",
+    "Filter_Stufe": "",
+    "Ausgeschlossen_Grund": "",
+    "Firmenname": "Muster Sensorik AG",
+    "CRM_Fit_Score": 9,
+    "AI_Status": "ok",
+    "Metric": "",
+    "Value": ""
+  },
+  {
+    "Bucket": "Rejected_Rule",
+    "Filter_Stufe": "regel",
+    "Ausgeschlossen_Grund": "Job- oder Karriereseite erkannt",
+    "Firmenname": "Demo Karriere Portal",
+    "CRM_Fit_Score": 0,
+    "AI_Status": "skipped",
+    "Metric": "",
+    "Value": ""
+  },
+  {
+    "Bucket": "Rejected_AI",
+    "Filter_Stufe": "ai",
+    "Ausgeschlossen_Grund": "Anti Pattern: CRM Berater",
+    "Firmenname": "Demo CRM Consulting GmbH",
+    "CRM_Fit_Score": 2,
+    "AI_Status": "ok",
+    "Metric": "",
+    "Value": ""
+  },
+  {
+    "Bucket": "Rejected_AI",
+    "Filter_Stufe": "ai",
+    "Ausgeschlossen_Grund": "CRM-Fit-Score zu niedrig (4)",
+    "Firmenname": "Demo Medien Verlag",
+    "CRM_Fit_Score": 4,
+    "AI_Status": "ok",
+    "Metric": "",
+    "Value": ""
+  },
+  {
+    "Bucket": "Run_Summary",
+    "Filter_Stufe": "",
+    "Ausgeschlossen_Grund": "",
+    "Firmenname": "",
+    "CRM_Fit_Score": "",
+    "AI_Status": "",
+    "Metric": "loop_items_total",
+    "Value": 18
+  },
+  {
+    "Bucket": "Run_Summary",
+    "Filter_Stufe": "",
+    "Ausgeschlossen_Grund": "",
+    "Firmenname": "",
+    "CRM_Fit_Score": "",
+    "AI_Status": "",
+    "Metric": "accepted_count",
+    "Value": 6
+  },
+  {
+    "Bucket": "Run_Summary",
+    "Filter_Stufe": "",
+    "Ausgeschlossen_Grund": "",
+    "Firmenname": "",
+    "CRM_Fit_Score": "",
+    "AI_Status": "",
+    "Metric": "rejected_rule_count",
+    "Value": 8
+  },
+  {
+    "Bucket": "Run_Summary",
+    "Filter_Stufe": "",
+    "Ausgeschlossen_Grund": "",
+    "Firmenname": "",
+    "CRM_Fit_Score": "",
+    "AI_Status": "",
+    "Metric": "rejected_ai_count",
+    "Value": 4
+  },
+  {
+    "Bucket": "Run_Summary",
+    "Filter_Stufe": "",
+    "Ausgeschlossen_Grund": "",
+    "Firmenname": "",
+    "CRM_Fit_Score": "",
+    "AI_Status": "",
+    "Metric": "crm_signal_hits_total",
+    "Value": 5
+  }
+]

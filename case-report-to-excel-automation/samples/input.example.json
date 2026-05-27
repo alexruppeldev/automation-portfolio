@@ -1,0 +1,11 @@
+{
+  "reportId": "demo-report-001",
+  "reportName": "akquiseliste demo",
+  "fileName": "akquiseliste_demo_input.csv",
+  "csvBase64": "<BASE64_CSV_CONTENT>",
+  "sugarBaseUrl": "https://crm.example.com",
+  "requestedBy": {
+    "id": "demo-user-id"
+  },
+  "callbackUrl": "https://crm.example.com/hooks/report-status"
+}

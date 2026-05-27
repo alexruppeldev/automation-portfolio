@@ -1,0 +1,13 @@
+{
+  "source": "mobile-card-capture",
+  "file": {
+    "field": "data",
+    "name": "business-card-demo.jpg",
+    "mimeType": "image/jpeg"
+  },
+  "requestContext": {
+    "submittedBy": "user@example.com",
+    "origin": "n8n.example.com"
+  }
+}
+

@@ -1,0 +1,38 @@
+[
+  {
+    "Firmenname": "Demo Anlagenbau GmbH",
+    "Website": "https://demo-anlagenbau.example",
+    "Allgemeine_Email": "info@demo-anlagenbau.example",
+    "Allgemeine_Telefonnummer": "+49 911 123456",
+    "Branche_Hinweise": "Fertigung oder Produktion",
+    "Regel_Score": 7,
+    "CRM_Fit_Score": 9,
+    "Empfehlung": "SugarCRM",
+    "Zielrolle": "Vertriebsleiter",
+    "Begruendung": "Technischer B2B Hersteller mit erklärungsbedürftigem Produktportfolio und mehrstufigem Vertrieb."
+  },
+  {
+    "Firmenname": "Muster Sensorik AG",
+    "Website": "https://muster-sensorik.example",
+    "Allgemeine_Email": "sales@muster-sensorik.example",
+    "Allgemeine_Telefonnummer": "+49 89 987654",
+    "Branche_Hinweise": "Fertigung oder Produktion",
+    "Regel_Score": 7,
+    "CRM_Fit_Score": 9,
+    "Empfehlung": "SugarCRM",
+    "Zielrolle": "Leiter Vertrieb",
+    "Begruendung": "International ausgerichteter Hersteller mit komplexen Produkten und erklärungsbedürftiger Beratung."
+  },
+  {
+    "Firmenname": "Beispiel Logistik SE",
+    "Website": "https://beispiel-logistik.example",
+    "Allgemeine_Email": "kontakt@beispiel-logistik.example",
+    "Allgemeine_Telefonnummer": "+49 30 555777",
+    "Branche_Hinweise": "Logistik",
+    "Regel_Score": 7,
+    "CRM_Fit_Score": 8,
+    "Empfehlung": "SugarCRM",
+    "Zielrolle": "Head of Sales",
+    "Begruendung": "B2B Dienstleister mit mehreren Standorten, Kundenservice und strukturierter Vertriebsorganisation."
+  }
+]

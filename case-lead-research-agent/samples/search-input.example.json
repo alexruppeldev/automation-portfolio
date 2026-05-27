@@ -1,0 +1,10 @@
+{
+  "queries": [
+    "\"Vertrieb\" \"Standorte\" site:.de",
+    "\"Vertriebsteam\" \"Standorte\" site:.de",
+    "\"mehrere Standorte\" \"Kundenservice\" site:.de"
+  ],
+  "num": 100,
+  "max_pages_per_query": 1,
+  "known_domains_file": "lead_recherche_known_domains.txt"
+}

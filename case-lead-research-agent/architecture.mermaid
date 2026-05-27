@@ -1,0 +1,16 @@
+flowchart LR
+    A[Suchqueries] --> B[SerpAPI]
+    B --> C[Domain Cleanup]
+    C --> D[Website Crawl]
+    D --> E[Impressum Analyse]
+    E --> F[Regelbasierte Vorfilterung]
+    F --> G{Relevant?}
+    G -- nein --> H[Rejected Rule]
+    G -- ja --> I[AI CRM Fit Bewertung]
+    I --> J{Score >= 7?}
+    J -- nein --> K[Rejected AI]
+    J -- ja --> L[Accepted Leads]
+    H --> M[Audit Export]
+    K --> M
+    L --> N[Excel Export]
+    L --> O[Known Domains Update]
