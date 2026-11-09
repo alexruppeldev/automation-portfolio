@@ -2,9 +2,9 @@
 
 Prüft eine Auftragsbestätigung gegen die eigene Bestellung. Beide PDFs werden per KI strukturiert ausgelesen, danach entscheiden feste Regeln über Belegpaarung, Positionszuordnung und Abweichungen. Der Prüfer bekommt einen interaktiven Bericht per E-Mail und kann Abweichungen direkt bewerten.
 
-## Hintergrund
+## Einordnung
 
-Praxisaufgabe aus einem Bewerbungsverfahren für eine Automation Stelle. Im Vergleich der eingereichten Lösungen geteilter erster Platz. Referenz auf Anfrage.
+Proof of Concept mit Demo-Daten, vollständig umgesetzt inkl. KI-Extraktion, Datenbank, Fehlerbehandlung, 14 dokumentierten Tests und technischer Doku. Entstanden als Praxisaufgabe in einem Auswahlverfahren, im Vergleich der eingereichten Lösungen auf dem geteilten ersten Platz. Referenz auf Anfrage.
 
 ## Stack
 

@@ -2,9 +2,9 @@
 
 Findet über ein n8n Formular das nächste gemeinsame freie Zeitfenster für mehrere Mitarbeiter, prüft den Slot direkt vor dem Speichern erneut und legt den Termin für alle Teilnehmer in PostgreSQL an.
 
-## Hintergrund
+## Einordnung
 
-Praxisaufgabe aus einem Bewerbungsverfahren für eine Automation Stelle. Im Vergleich der eingereichten Lösungen geteilter erster Platz. Referenz auf Anfrage.
+Proof of Concept mit Demo-Daten, vollständig umgesetzt inkl. Datenbank, Fehlerbehandlung, 10 dokumentierten Tests und technischer Doku. Entstanden als Praxisaufgabe in einem Auswahlverfahren, im Vergleich der eingereichten Lösungen auf dem geteilten ersten Platz. Referenz auf Anfrage.
 
 ## Stack
 
