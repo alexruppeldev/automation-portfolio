@@ -19,7 +19,7 @@ Praktische Demos aus realen n8n, AI und SugarCRM Projekten. Sanitisiert, anonymi
 | Automation | n8n (self hosted, Docker), Webhooks, OAuth 2.0, asynchrone Callbacks |
 | AI | Gemini, OpenAI, strukturierte JSON Extraktion, Prompt Engineering |
 | CRM | SugarCRM REST API v11, Lead und Contact Modelle, Duplikatpruefung |
-| Daten | XLSX, CSV, SerpAPI, HTML Parsing |
+| Daten | PostgreSQL, XLSX, CSV, SerpAPI, HTML Parsing |
 | Betrieb | Backup Automation, Healthchecks, Security Advisory Monitoring, Update Workflow |
 
 ## Cases
@@ -31,6 +31,8 @@ Praktische Demos aus realen n8n, AI und SugarCRM Projekten. Sanitisiert, anonymi
 | 3 | [Smart Lead Import](case-smart-lead-import/) | Freitext zu strukturiertem Lead, Duplikatpruefung gegen Lead und Contact | n8n, Gemini, SugarCRM, Duplicate Detection |
 | 4 | [n8n Production Ops](case-n8n-production-ops/) | Backup, Security Advisories, Update Check, Healthcheck | n8n, GitHub Advisories API, Docker |
 | 5 | [AI Lead Research Agent](case-lead-research-agent/) | B2B Lead Recherche mit Regel und AI Scoring, Audit Export | n8n, SerpAPI, Gemini, SugarCRM Fit Scoring, XLSX |
+| 6 | [Terminfinder](case-terminfinder/) | Naechstes gemeinsames freies Zeitfenster finden, Konfliktcheck vor dem Speichern, Rollback bei Teilbuchung | n8n Forms, PostgreSQL, Error Workflow |
+| 7 | [Belegabgleich](case-belegabgleich/) | Bestellung gegen Auftragsbestaetigung pruefen, AI Extraktion plus deterministischer Vergleich, Prueferfeedback | n8n, OpenAI, PostgreSQL, HTML Report |
 
 ## Was du in jedem Case findest
 

@@ -1,0 +1,158 @@
+{
+  "overallStatus": "MISMATCH",
+  "overallSeverity": "BLOCKING",
+  "priceTolerancePercent": 0,
+  "reconciliation": {
+    "positionDelta": 46.8,
+    "documentDelta": 46.8,
+    "consistent": true
+  },
+  "documentChecks": [
+    {
+      "fieldId": "orderNumber",
+      "field": "Bestellnummer",
+      "comparisonType": "EQUAL",
+      "severity": "MATCH",
+      "orderValue": "BE-2026-0417",
+      "confirmationValue": "Ihre Bestellung BE-2026-0417 vom 14.09.2026",
+      "message": "Die Bestellnummer ist in den Referenzangaben der Auftragsbestätigung enthalten."
+    },
+    {
+      "fieldId": "customerNumber",
+      "field": "Kundennummer",
+      "comparisonType": "EQUAL",
+      "severity": "MATCH",
+      "orderValue": "K-10457",
+      "confirmationValue": "K-10457",
+      "message": "Kundennummer stimmt überein."
+    },
+    {
+      "fieldId": "currency",
+      "field": "Währung",
+      "comparisonType": "EQUAL",
+      "severity": "MATCH",
+      "orderValue": "EUR",
+      "confirmationValue": "EUR",
+      "message": "Währung stimmt überein."
+    },
+    {
+      "fieldId": "paymentTerms",
+      "field": "Zahlungsbedingungen",
+      "comparisonType": "ADDED_IN_CONFIRMATION",
+      "severity": "REVIEW",
+      "orderValue": "",
+      "confirmationValue": "14 Tage 2 % Skonto, 30 Tage netto",
+      "message": "Zahlungsbedingungen wird nur in der Auftragsbestätigung festgelegt."
+    },
+    {
+      "fieldId": "incoterms",
+      "field": "Incoterms",
+      "comparisonType": "ADDED_IN_CONFIRMATION",
+      "severity": "REVIEW",
+      "orderValue": "",
+      "confirmationValue": "DAP",
+      "message": "Incoterms wird nur in der Auftragsbestätigung festgelegt."
+    },
+    {
+      "fieldId": "netTotal",
+      "field": "Gesamtbetrag netto",
+      "comparisonType": "DIFFERENT",
+      "severity": "BLOCKING",
+      "orderValue": 3990,
+      "confirmationValue": 4036.8,
+      "difference": 46.8,
+      "differencePercent": 1.1729323308270676,
+      "unit": "EUR",
+      "message": "Gesamtbetrag netto weicht um 46.80 EUR ab."
+    }
+  ],
+  "positionResultExample": {
+    "orderPosition": "2",
+    "confirmationPosition": "20",
+    "articleNumber": "MB-7120 / 7120",
+    "signal": "ARTICLE",
+    "status": "MISMATCH",
+    "severity": "BLOCKING",
+    "checks": [
+      {
+        "fieldId": "quantity",
+        "field": "Menge",
+        "comparisonType": "EQUAL",
+        "severity": "MATCH",
+        "orderValue": 2,
+        "confirmationValue": 2,
+        "difference": 0,
+        "differencePercent": 0,
+        "unit": "",
+        "message": "Menge stimmt überein."
+      },
+      {
+        "fieldId": "unit",
+        "field": "Einheit",
+        "comparisonType": "EQUAL",
+        "severity": "MATCH",
+        "orderValue": "Stk",
+        "confirmationValue": "Stk",
+        "message": "Einheit stimmt überein."
+      },
+      {
+        "fieldId": "unitPriceBeforeDiscount",
+        "field": "Preis vor Rabatt",
+        "comparisonType": "DIFFERENT",
+        "severity": "BLOCKING",
+        "orderValue": 1240,
+        "confirmationValue": 1279,
+        "difference": 39,
+        "differencePercent": 3.1451612903225805,
+        "unit": "EUR",
+        "message": "Preis vor Rabatt weicht um 39.00 EUR ab."
+      },
+      {
+        "fieldId": "effectiveDiscountPercent",
+        "field": "Rabatt in Prozentpunkten",
+        "comparisonType": "EQUAL",
+        "severity": "MATCH",
+        "orderValue": 40,
+        "confirmationValue": 40,
+        "difference": 0,
+        "differencePercent": 0,
+        "unit": "%",
+        "message": "Rabatt in Prozentpunkten stimmt überein."
+      },
+      {
+        "fieldId": "effectiveUnitPrice",
+        "field": "Effektiver Stückpreis",
+        "comparisonType": "DIFFERENT",
+        "severity": "BLOCKING",
+        "orderValue": 744,
+        "confirmationValue": 767.4,
+        "difference": 23.4,
+        "differencePercent": 3.1451612903225805,
+        "unit": "EUR",
+        "message": "Effektiver Stückpreis weicht um 23.40 EUR ab."
+      },
+      {
+        "fieldId": "lineTotal",
+        "field": "Positionssumme",
+        "comparisonType": "DIFFERENT",
+        "severity": "BLOCKING",
+        "orderValue": 1488,
+        "confirmationValue": 1534.8,
+        "difference": 46.8,
+        "differencePercent": 3.1451612903225805,
+        "unit": "EUR",
+        "message": "Positionssumme weicht um 46.80 EUR ab."
+      },
+      {
+        "fieldId": "positionDeliveryText",
+        "field": "Liefertermin Position",
+        "comparisonType": "ADDED_IN_CONFIRMATION",
+        "severity": "INFO",
+        "orderValue": "",
+        "confirmationValue": "KW 42",
+        "message": "Liefertermin Position wird nur in der Auftragsbestätigung festgelegt."
+      }
+    ],
+    "remark": "Preis vor Rabatt weicht um 39.00 EUR ab. Effektiver Stückpreis weicht um 23.40 EUR ab. Positionssumme weicht um 46.80 EUR ab. Liefertermin Position wird nur in der Auftragsbestätigung festgelegt."
+  }
+}

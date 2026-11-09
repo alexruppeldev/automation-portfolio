@@ -1,0 +1,7 @@
+{
+  "Mitarbeiter": ["Anna Beispiel", "Max Muster"],
+  "Dauer in Minuten": 120,
+  "Frühester Termin": "2027-03-01",
+  "Spätester Termin": "2027-03-05",
+  "Bemerkung": "Bitte Beamer reservieren"
+}

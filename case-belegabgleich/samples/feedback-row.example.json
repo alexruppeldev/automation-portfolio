@@ -1,0 +1,39 @@
+{
+  "matchKey": "MUSTERBUROMOBEL|MB-7120",
+  "supplierKey": "MUSTERBUROMOBEL",
+  "articleKey": "MB-7120",
+  "supplier": "Muster Büromöbel GmbH",
+  "orderArticleNumber": "MB-7120",
+  "confirmationArticleNumber": "7120",
+  "configurationText": "Platte Eiche, Gestell weiss",
+  "description": "Schreibtisch elektrisch höhenverstellbar 160x80",
+  "orderNumber": "BE-2026-0417",
+  "confirmationNumber": "AB-88231",
+  "orderPosition": "2",
+  "confirmationPosition": "20",
+  "systemStatus": "MISMATCH",
+  "decision": "ACCEPTED_DIFFERENCE",
+  "comment": "Neue Preisliste ab 01.09. mit Einkauf abgestimmt",
+  "remember": true,
+  "fieldDifferences": [
+    {
+      "fieldId": "unitPriceBeforeDiscount",
+      "comparisonType": "DIFFERENT",
+      "difference": 39.0
+    },
+    {
+      "fieldId": "effectiveUnitPrice",
+      "comparisonType": "DIFFERENT",
+      "difference": 23.4
+    },
+    {
+      "fieldId": "lineTotal",
+      "comparisonType": "DIFFERENT",
+      "difference": 46.8
+    }
+  ],
+  "differenceSignature": "effectiveUnitPrice:23.40|lineTotal:46.80|unitPriceBeforeDiscount:39.00",
+  "numericOnly": true,
+  "submittedBy": "PR",
+  "decidedAt": "2026-09-16T08:20:31.000Z"
+}

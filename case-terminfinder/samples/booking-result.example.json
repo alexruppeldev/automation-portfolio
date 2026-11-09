@@ -1,0 +1,22 @@
+{
+  "erwartet": 2,
+  "gespeichert": true,
+  "datensaetze": [
+    {
+      "terminGruppe": "TF-4711-k3x9p2qa-m7d1r8tz",
+      "kurzname": "Anna Beispiel",
+      "bezeichnung": "Projektabstimmung",
+      "beginn": "2027-03-02T12:30:00.000Z",
+      "ende": "2027-03-02T14:30:00.000Z",
+      "bemerkung": "Bitte Beamer reservieren"
+    },
+    {
+      "terminGruppe": "TF-4711-k3x9p2qa-m7d1r8tz",
+      "kurzname": "Max Muster",
+      "bezeichnung": "Projektabstimmung",
+      "beginn": "2027-03-02T12:30:00.000Z",
+      "ende": "2027-03-02T14:30:00.000Z",
+      "bemerkung": "Bitte Beamer reservieren"
+    }
+  ]
+}

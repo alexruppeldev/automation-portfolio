@@ -1,0 +1,25 @@
+{
+  "status": "PAIRED",
+  "checks": [
+    {
+      "field": "Lieferant",
+      "result": "MATCH",
+      "detail": "Muster Büromöbel GmbH / Muster Büromöbel GmbH"
+    },
+    {
+      "field": "Bestellnummer",
+      "result": "MATCH",
+      "detail": "BE-2026-0417"
+    },
+    {
+      "field": "Kundennummer",
+      "result": "MATCH",
+      "detail": "K-10457"
+    },
+    {
+      "field": "Währung",
+      "result": "MATCH",
+      "detail": "EUR"
+    }
+  ]
+}

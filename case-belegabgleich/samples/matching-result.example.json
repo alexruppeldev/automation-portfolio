@@ -1,0 +1,80 @@
+{
+  "matchingSummary": {
+    "matched": 4,
+    "byStage": [
+      {
+        "stage": 0,
+        "count": 0
+      },
+      {
+        "stage": 1,
+        "count": 4
+      },
+      {
+        "stage": 2,
+        "count": 0
+      },
+      {
+        "stage": 3,
+        "count": 0
+      }
+    ],
+    "unresolvedOrder": 0,
+    "unresolvedConfirmation": 0
+  },
+  "matches": [
+    {
+      "orderPositionIndex": 0,
+      "confirmationPositionIndex": 0,
+      "stage": 1,
+      "signal": "ARTICLE",
+      "coverage": 1,
+      "evidence": 2.7726,
+      "sharedTokens": [
+        "4410",
+        "SW"
+      ],
+      "matchingStatus": "MATCHED",
+      "reason": "Eindeutig und gegenseitig bester Kandidat über ARTICLE"
+    },
+    {
+      "orderPositionIndex": 1,
+      "confirmationPositionIndex": 1,
+      "stage": 1,
+      "signal": "ARTICLE",
+      "coverage": 1,
+      "evidence": 1.3863,
+      "sharedTokens": [
+        "7120"
+      ],
+      "matchingStatus": "MATCHED",
+      "reason": "Eindeutig und gegenseitig bester Kandidat über ARTICLE"
+    },
+    {
+      "orderPositionIndex": 2,
+      "confirmationPositionIndex": 2,
+      "stage": 1,
+      "signal": "ARTICLE",
+      "coverage": 1,
+      "evidence": 1.3863,
+      "sharedTokens": [
+        "3305"
+      ],
+      "matchingStatus": "MATCHED",
+      "reason": "Eindeutig und gegenseitig bester Kandidat über ARTICLE"
+    },
+    {
+      "orderPositionIndex": 3,
+      "confirmationPositionIndex": 3,
+      "stage": 1,
+      "signal": "ARTICLE",
+      "coverage": 1,
+      "evidence": 1.3863,
+      "sharedTokens": [
+        "9001"
+      ],
+      "matchingStatus": "MATCHED",
+      "reason": "Eindeutig und gegenseitig bester Kandidat über ARTICLE"
+    }
+  ]
+}

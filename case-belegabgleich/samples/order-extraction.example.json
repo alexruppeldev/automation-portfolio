@@ -1,0 +1,98 @@
+{
+  "supplierVatId": null,
+  "customer": "Beispiel Handels GmbH",
+  "referenceTexts": [],
+  "currency": "EUR",
+  "documentDate": "2026-09-14",
+  "deliveryText": null,
+  "deliveryAddress": null,
+  "paymentTerms": null,
+  "incoterms": null,
+  "deliveryInstructions": null,
+  "additionalTerms": [],
+  "vatRate": 19,
+  "vatAmount": null,
+  "grossTotal": null,
+  "nonItemLines": [],
+  "extractionWarnings": [],
+  "documentType": "order",
+  "supplier": "Muster Büromöbel GmbH",
+  "customerNumber": "K-10457",
+  "orderNumber": "BE-2026-0417",
+  "confirmationNumber": null,
+  "positions": [
+    {
+      "sourcePosition": "1",
+      "articleNumber": "MB-4410-SW",
+      "manufacturerArticleNumber": null,
+      "description": "Bürodrehstuhl Ergo Line 4410",
+      "configurationText": "Armlehnen 3D, Rollen hart",
+      "variant": null,
+      "quantity": 4,
+      "unit": "Stk",
+      "unitPriceBeforeDiscount": 689,
+      "discountComponents": [
+        40
+      ],
+      "effectiveDiscountPercent": 40,
+      "lineTotal": 1653.6,
+      "deliveryText": null,
+      "sourcePage": 1
+    },
+    {
+      "sourcePosition": "2",
+      "articleNumber": "MB-7120",
+      "manufacturerArticleNumber": null,
+      "description": "Schreibtisch elektrisch höhenverstellbar 160x80",
+      "configurationText": "Platte Eiche, Gestell weiss",
+      "variant": null,
+      "quantity": 2,
+      "unit": "Stk",
+      "unitPriceBeforeDiscount": 1240,
+      "discountComponents": [
+        40
+      ],
+      "effectiveDiscountPercent": 40,
+      "lineTotal": 1488,
+      "deliveryText": null,
+      "sourcePage": 1
+    },
+    {
+      "sourcePosition": "3",
+      "articleNumber": "MB-3305",
+      "manufacturerArticleNumber": null,
+      "description": "Rollcontainer 3 Schubladen",
+      "configurationText": "Weiss, Zentralverriegelung",
+      "variant": null,
+      "quantity": 2,
+      "unit": "Stk",
+      "unitPriceBeforeDiscount": 329,
+      "discountComponents": [
+        40
+      ],
+      "effectiveDiscountPercent": 40,
+      "lineTotal": 394.8,
+      "deliveryText": null,
+      "sourcePage": 1
+    },
+    {
+      "sourcePosition": "4",
+      "articleNumber": "MB-9001",
+      "manufacturerArticleNumber": null,
+      "description": "Monitorarm doppelt",
+      "configurationText": "Schwarz, Tischklemme",
+      "variant": null,
+      "quantity": 4,
+      "unit": "Stk",
+      "unitPriceBeforeDiscount": 189,
+      "discountComponents": [
+        40
+      ],
+      "effectiveDiscountPercent": 40,
+      "lineTotal": 453.6,
+      "deliveryText": null,
+      "sourcePage": 1
+    }
+  ],
+  "netTotal": 3990
+}
