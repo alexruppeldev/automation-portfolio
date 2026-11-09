@@ -13,22 +13,21 @@ n8n Form Trigger und Webhook, OpenAI Responses API (PDF Input, strict JSON Schem
 ## Ablauf
 
 ```mermaid
-flowchart LR
-  A[Upload Bestellung + AB] --> B{Eingabe gültig?}
-  B -->|nein| X[Fehlerseite]
-  B -->|ja| C[KI-Extraktion je PDF]
-  C --> D[Plausibilisierung]
-  D -->|Widerspruch| E[1 Korrekturlauf]
+flowchart TB
+  A["Upload<br/>Bestellung + Auftragsbestätigung"] --> B{"Eingabe<br/>gültig?"}
+  B -- "nein" --> X["Fehlerseite im Formular"]
+  B -- "ja" --> C["KI-Extraktion je PDF<br/>striktes JSON Schema"]
+  C --> D{"Summen<br/>plausibel?"}
+  D -- "nein" --> E["Ein Korrekturlauf<br/>am Originaldokument"]
   E --> F
-  D -->|ok| F[Belegpaarung]
-  F --> G[Positionsmatching]
-  G --> H[Deterministischer Vergleich]
-  H --> I[Prüferhistorie anwenden]
-  I --> J[HTML Bericht per E-Mail]
-  J --> K[Prüflauf in PostgreSQL]
-  L[Feedback aus Bericht] --> M[Feedback Webhook]
-  M --> N[Entscheidung in PostgreSQL]
-  N -.-> I
+  D -- "ja" --> F["Belegpaarung<br/>Lieferant, Bestellnr., Kundennr., Währung"]
+  F --> G["Positionsmatching<br/>4-stufige Kaskade"]
+  G --> H["Deterministischer Vergleich<br/>Menge, Preis, Rabatt, Summen"]
+  H --> I["Gemerkte Prüferentscheidungen<br/>aus PostgreSQL anwenden"]
+  I --> J["HTML Bericht per E-Mail<br/>Prüflauf protokollieren"]
+  J -. "Prüfer bewertet Abweichung" .-> L["Feedback Webhook"]
+  L --> M["Entscheidung in PostgreSQL"]
+  M -. "beim nächsten Beleg" .-> I
 ```
 
 ## Verarbeitungsschritte
@@ -64,6 +63,7 @@ flowchart LR
 
 | Datei | Zweck |
 |---|---|
+| `architecture.mermaid` | Ablaufdiagramm |
 | `code-snippets/validate-pdf-upload.js` | PDF Signatur, E-Mail, Toleranz und Feedback-URL aus Request Headern |
 | `code-snippets/extraction-schema.md` | JSON Schema der KI-Extraktion und Plausibilisierung |
 | `code-snippets/check-document-pairing.js` | Belegpaarung über Lieferant, Bestellreferenz, Kundennummer, Währung |

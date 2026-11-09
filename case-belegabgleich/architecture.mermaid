@@ -1,0 +1,15 @@
+flowchart TB
+  A["Upload<br/>Bestellung + Auftragsbestätigung"] --> B{"Eingabe<br/>gültig?"}
+  B -- "nein" --> X["Fehlerseite im Formular"]
+  B -- "ja" --> C["KI-Extraktion je PDF<br/>striktes JSON Schema"]
+  C --> D{"Summen<br/>plausibel?"}
+  D -- "nein" --> E["Ein Korrekturlauf<br/>am Originaldokument"]
+  E --> F
+  D -- "ja" --> F["Belegpaarung<br/>Lieferant, Bestellnr., Kundennr., Währung"]
+  F --> G["Positionsmatching<br/>4-stufige Kaskade"]
+  G --> H["Deterministischer Vergleich<br/>Menge, Preis, Rabatt, Summen"]
+  H --> I["Gemerkte Prüferentscheidungen<br/>aus PostgreSQL anwenden"]
+  I --> J["HTML Bericht per E-Mail<br/>Prüflauf protokollieren"]
+  J -. "Prüfer bewertet Abweichung" .-> L["Feedback Webhook"]
+  L --> M["Entscheidung in PostgreSQL"]
+  M -. "beim nächsten Beleg" .-> I

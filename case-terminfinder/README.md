@@ -13,20 +13,22 @@ n8n Form Trigger und mehrstufige Formulare, PostgreSQL 16 (Docker), parametriert
 ## Ablauf
 
 ```mermaid
-flowchart LR
-  A[Formular Suchparameter] --> B[State per executionId]
-  B --> C[Termine aus PostgreSQL]
-  C --> D[Frühester gemeinsamer Slot]
-  D --> E{Bestätigung}
-  E -->|erneut suchen| C
-  E -->|beenden| H[State löschen]
-  E -->|ja| F[Konfliktcheck vor Speichern]
-  F -->|Konflikt| D
-  F -->|frei| G[Termin je Teilnehmer speichern]
-  G --> I{Alle gespeichert?}
-  I -->|nein| J[Rollback über terminGruppe]
-  I -->|ja| H
-  J --> H
+flowchart TB
+  A["Formular<br/>Mitarbeiter, Dauer, Zeitraum"] --> B["Eingaben prüfen<br/>State per executionId speichern"]
+  B --> C["Termine aus PostgreSQL laden"]
+  C --> D["Frühesten gemeinsamen<br/>freien Slot suchen"]
+  D --> E{"Vorschlag<br/>annehmen?"}
+  E -- "erneut suchen" --> C
+  E -- "beenden" --> Z["State löschen"]
+  E -- "ja" --> F["Bezeichnung erfassen"]
+  F --> G["Termine erneut lesen<br/>Konfliktcheck"]
+  G -- "Konflikt" --> D
+  G -- "frei" --> H["Termin je Teilnehmer speichern<br/>gemeinsame terminGruppe"]
+  H --> I{"Alle Datensätze<br/>gespeichert?"}
+  I -- "nein" --> J["Rollback<br/>Gruppe löschen"]
+  I -- "ja" --> K["Erfolgsmeldung"]
+  J --> Z
+  K --> Z
 ```
 
 ## Verarbeitungsschritte
@@ -64,6 +66,7 @@ flowchart LR
 
 | Datei | Zweck |
 |---|---|
+| `architecture.mermaid` | Ablaufdiagramm |
 | `code-snippets/find-free-slot.js` | Belegung zusammenführen, Arbeitsfenster in Europe/Berlin berechnen, frühesten freien Slot im 15 Minuten Raster finden |
 | `code-snippets/revalidate-slot.js` | Gespeicherten Slot vor dem INSERT gegen Terminregeln und aktuelle Termine prüfen |
 | `code-snippets/booking-queries.sql` | Parametrierte Abfragen für Laden, Speichern und Rollback |

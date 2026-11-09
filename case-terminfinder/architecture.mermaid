@@ -1,0 +1,16 @@
+flowchart TB
+  A["Formular<br/>Mitarbeiter, Dauer, Zeitraum"] --> B["Eingaben prüfen<br/>State per executionId speichern"]
+  B --> C["Termine aus PostgreSQL laden"]
+  C --> D["Frühesten gemeinsamen<br/>freien Slot suchen"]
+  D --> E{"Vorschlag<br/>annehmen?"}
+  E -- "erneut suchen" --> C
+  E -- "beenden" --> Z["State löschen"]
+  E -- "ja" --> F["Bezeichnung erfassen"]
+  F --> G["Termine erneut lesen<br/>Konfliktcheck"]
+  G -- "Konflikt" --> D
+  G -- "frei" --> H["Termin je Teilnehmer speichern<br/>gemeinsame terminGruppe"]
+  H --> I{"Alle Datensätze<br/>gespeichert?"}
+  I -- "nein" --> J["Rollback<br/>Gruppe löschen"]
+  I -- "ja" --> K["Erfolgsmeldung"]
+  J --> Z
+  K --> Z
