@@ -1,6 +1,3 @@
--- Parametrierte Abfragen aus dem Terminfinder.
--- Alle Formularwerte kommen als Query Parameter ($1, $2, ...) in den Postgres Node,
--- nie per String-Konkatenation. Sonderzeichen bleiben damit reine Datenwerte.
 
 -- 1) Termine fuer den Suchzeitraum laden
 --    Zeitspalten werden explizit als UTC ISO gelesen, gerechnet wird danach in Europe/Berlin.
