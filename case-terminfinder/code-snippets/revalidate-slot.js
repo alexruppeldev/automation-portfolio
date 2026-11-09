@@ -1,15 +1,15 @@
-// Prueft einen bestaetigten Slot unmittelbar vor dem Speichern erneut.
+// Prüft einen bestätigten Slot unmittelbar vor dem Speichern erneut.
 //
-// Pipeline Stufe: Bestaetigung -> Termine vor Anlage laden -> [Konfliktcheck] -> Termin speichern
+// Pipeline Stufe: Bestätigung -> Termine vor Anlage laden -> [Konfliktcheck] -> Termin speichern
 //
-// Zwischen Vorschlag und Speichern koennen Minuten vergehen. In der Zeit kann ein
+// Zwischen Vorschlag und Speichern können Minuten vergehen. In der Zeit kann ein
 // anderer Termin eingetragen werden. Deshalb wird der Slot hier gegen die aktuellen
-// Datenbankwerte und die Terminregeln geprueft und nicht dem Formular vertraut.
+// Datenbankwerte und die Terminregeln geprüft und nicht dem Formular vertraut.
 //
 // Ergebnis:
 //  - frei      -> speichern
 //  - konflikt  -> automatisch neuen Slot ab diesem Zeitpunkt suchen
-//  - fehler    -> State im Formular manipuliert oder technisch ungueltig
+//  - fehler    -> State im Formular manipuliert oder technisch ungültig
 
 const TZ = 'Europe/Berlin';
 const ARBEIT_VON = 8 * 60;

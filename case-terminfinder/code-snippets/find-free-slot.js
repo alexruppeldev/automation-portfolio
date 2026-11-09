@@ -1,15 +1,15 @@
-// Sucht den fruehesten gemeinsamen freien Slot fuer mehrere Teilnehmer.
+// Sucht den frühesten gemeinsamen freien Slot für mehrere Teilnehmer.
 //
-// Pipeline Stufe: Termine laden (PostgreSQL) -> [Slot-Suche] -> Bestaetigung im Formular
+// Pipeline Stufe: Termine laden (PostgreSQL) -> [Slot-Suche] -> Bestätigung im Formular
 //
 // Input:  state mit Teilnehmern, Dauer und Suchzeitraum, termine aus der Datenbank (UTC ISO)
 // Output: gefundener Slot als UTC ISO plus Anzeige in Europe/Berlin
 //
 // Schwerpunkte:
-//  - Termine aller Teilnehmer zu belegten Bloecken zusammenfuehren
+//  - Termine aller Teilnehmer zu belegten Blöcken zusammenführen
 //  - Arbeitsfenster je Tag in Europe/Berlin berechnen, Sommer und Winterzeit inklusive
 //  - Wochenenden und Mittagspause auslassen, 15 Minuten Raster
-//  - searchAfterMs fuer "erneut suchen", damit der naechste Slot nach dem letzten Vorschlag kommt
+//  - searchAfterMs für "erneut suchen", damit der nächste Slot nach dem letzten Vorschlag kommt
 
 const TZ = 'Europe/Berlin';
 const RASTER = 15;
@@ -69,7 +69,7 @@ function findFreeSlot(s, termine, now = Date.now()) {
   const teilnehmer = JSON.parse(String(s.teilnehmerJson || '[]'));
   const dauerMs = Number(s.dauer) * 60000;
 
-  // nur Termine der ausgewaehlten Teilnehmer, sortiert und ueberlappende zusammengefasst
+  // nur Termine der ausgewählten Teilnehmer, sortiert und überlappende zusammengefasst
   const sperren = termine
     .filter(r => teilnehmer.includes(r.kurzname))
     .map(r => [Date.parse(r.beginn), Date.parse(r.ende)])

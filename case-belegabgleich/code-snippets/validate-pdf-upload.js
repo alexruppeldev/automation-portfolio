@@ -1,15 +1,15 @@
 // Validiert den Formular-Upload, bevor ein einziger OpenAI Aufruf entsteht.
 //
-// Pipeline Stufe: Form Trigger -> [Eingaben validieren] -> Eingabe gueltig? -> PDF vorbereiten
+// Pipeline Stufe: Form Trigger -> [Eingaben validieren] -> Eingabe gültig? -> PDF vorbereiten
 //
 // Schwerpunkte:
-//  - PDF nicht nur ueber Endung und MIME Typ pruefen, sondern ueber die Signatur %PDF-
-//    (eine umbenannte TXT oder JSON Datei faellt damit raus)
-//  - E-Mail und Preistoleranz pruefen
-//  - Feedback-URL fuer den interaktiven Bericht aus den Request Headern der aktuellen
+//  - PDF nicht nur über Endung und MIME Typ prüfen, sondern über die Signatur %PDF-
+//    (eine umbenannte TXT oder JSON Datei fällt damit raus)
+//  - E-Mail und Preistoleranz prüfen
+//  - Feedback-URL für den interaktiven Bericht aus den Request Headern der aktuellen
 //    n8n Instanz ableiten, statt localhost oder eine Testinstanz fest einzutragen
 //
-// Im n8n Code Node kommt der Buffer ueber this.helpers.getBinaryDataBuffer(0, property).
+// Im n8n Code Node kommt der Buffer über this.helpers.getBinaryDataBuffer(0, property).
 
 const PDF_SIGNATURE = '%PDF-';
 

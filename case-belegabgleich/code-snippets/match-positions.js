@@ -1,11 +1,11 @@
-// Ordnet Positionen der Bestellung den Positionen der Auftragsbestaetigung zu.
+// Ordnet Positionen der Bestellung den Positionen der Auftragsbestätigung zu.
 //
 // Pipeline Stufe: Belegpaarung -> [Positionsmatching] -> deterministischer Vergleich
 //
 // Lieferanten schreiben Artikelnummern oft anders als der Besteller
-// (z. B. "MB-7120" in der Bestellung, "7120" in der Bestaetigung). Die Reihenfolge
-// der Positionen ist auch nicht verlaesslich. Deshalb wird vor jedem Wertvergleich
-// erst sauber zugeordnet, Menge und Preis spielen fuer die Zuordnung keine Rolle.
+// (z. B. "MB-7120" in der Bestellung, "7120" in der Bestätigung). Die Reihenfolge
+// der Positionen ist auch nicht verlässlich. Deshalb wird vor jedem Wertvergleich
+// erst sauber zugeordnet, Menge und Preis spielen für die Zuordnung keine Rolle.
 //
 // Kaskade:
 //  - Stufe 0: Artikelnummer exakt gleich und auf beiden Seiten eindeutig
@@ -13,10 +13,10 @@
 //  - Stufe 2: CONFIGURATION  (Konfiguration und Variante)
 //  - Stufe 3: DESCRIPTION    (Beschreibung)
 //
-// Pro Stufe zaehlen nur Bridge-Tokens, also Tokens die in beiden Belegen vorkommen.
-// Seltene Tokens wiegen mehr (IDF). Ein Paar wird nur akzeptiert, wenn es fuer beide
+// Pro Stufe zählen nur Bridge-Tokens, also Tokens die in beiden Belegen vorkommen.
+// Seltene Tokens wiegen mehr (IDF). Ein Paar wird nur akzeptiert, wenn es für beide
 // Seiten gegenseitig der beste Kandidat ist und es keinen Gleichstand gibt.
-// Keine feste Mindest-Coverage, damit unterschiedliche Praefixe kein Problem sind.
+// Keine feste Mindest-Coverage, damit unterschiedliche Präfixe kein Problem sind.
 
 const EPSILON = 1e-9;
 
@@ -127,7 +127,7 @@ function matchPositions(order, confirmation, pairingStatus) {
       const forward = rank(left, freeConfirmation, true);
       if (!forward.usable) continue;
       const right = forward.best.other;
-      // Gegenprobe: ist left auch fuer right der beste Kandidat?
+      // Gegenprobe: ist left auch für right der beste Kandidat?
       const backward = rank(right, freeOrder, false);
       if (!backward.usable || backward.best.other.index !== left.index) continue;
       matches.push({
@@ -165,7 +165,7 @@ function matchPositions(order, confirmation, pairingStatus) {
         return accepted.length > 0;
       };
 
-      // nach jedem Treffer wieder bei der staerksten Stufe anfangen
+      // nach jedem Treffer wieder bei der stärksten Stufe anfangen
       if (commit(resolveStageZero(freeOrder, freeConfirmation))) {
         progress = true;
         continue;

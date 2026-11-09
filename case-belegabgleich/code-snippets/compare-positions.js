@@ -1,15 +1,15 @@
 // Deterministischer Vergleich zugeordneter Positionen.
 //
-// Pipeline Stufe: Positionsmatching -> [Vergleich] -> Historie anwenden -> HTML Pruefbericht
+// Pipeline Stufe: Positionsmatching -> [Vergleich] -> Historie anwenden -> HTML Prüfbericht
 //
-// Die KI liest nur aus. Ob eine Abweichung vorliegt, entscheiden ausschliesslich
+// Die KI liest nur aus. Ob eine Abweichung vorliegt, entscheiden ausschließlich
 // diese Regeln. Das macht jedes Ergebnis nachvollziehbar und reproduzierbar.
 //
 // Schweregrade:  MATCH < INFO < REVIEW < BLOCKING
 // Gesamtstatus:  MATCH | MANUAL_REVIEW | MISMATCH
 //
-// Preistoleranz gilt nur fuer Preisfelder. Menge und Rabatt muessen exakt passen.
-// Fehlende oder zusaetzliche Positionen bekommen einen eigenen Check positionPresence,
+// Preistoleranz gilt nur für Preisfelder. Menge und Rabatt müssen exakt passen.
+// Fehlende oder zusätzliche Positionen bekommen einen eigenen Check positionPresence,
 // damit auch sie im Bericht ein Feedbackfeld erhalten.
 
 const SEVERITY = { MATCH: 0, INFO: 1, REVIEW: 2, BLOCKING: 3 };

@@ -1,9 +1,9 @@
-// Vereinheitlicht die Daten des n8n Error Triggers fuer die Fehlermail.
+// Vereinheitlicht die Daten des n8n Error Triggers für die Fehlermail.
 //
 // Pipeline Stufe: Error Trigger -> [Fehlerdaten vereinheitlichen] -> Fehlermail senden
 //
 // n8n liefert zwei unterschiedliche Strukturen:
-//  - Fehler waehrend der Ausfuehrung: Daten unter execution, mit id und url
+//  - Fehler während der Ausführung: Daten unter execution, mit id und url
 //  - Fehler im Trigger Node: Daten unter trigger, es gibt keine Execution und keinen Link
 //
 // Der separate Error Workflow wird im Hauptworkflow unter Workflow Settings zugeordnet.

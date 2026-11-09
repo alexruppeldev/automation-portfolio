@@ -1,20 +1,20 @@
-// Prueft, ob Bestellung und Auftragsbestaetigung ueberhaupt zusammengehoeren.
+// Prüft, ob Bestellung und Auftragsbestätigung überhaupt zusammengehören.
 //
 // Pipeline Stufe: KI-Extraktion beider PDFs -> [Belegpaarung] -> Positionsmatching
 //
-// Ohne diese Pruefung wuerde ein falsch hochgeladenes Belegpaar Position fuer
+// Ohne diese Prüfung würde ein falsch hochgeladenes Belegpaar Position für
 // Position verglichen und liefert einen Bericht voller Scheinabweichungen.
 //
 // Status:
 //  - PAIRED               mindestens ein Merkmal passt, keins widerspricht
-//  - UNVERIFIED           nichts widerspricht, aber nichts ist bestaetigt
+//  - UNVERIFIED           nichts widerspricht, aber nichts ist bestätigt
 //  - WRONG_DOCUMENT_PAIR  mindestens ein Konflikt, Matching wird blockiert
 
 const tokens = (value) => String(value ?? '')
   .normalize('NFKD').replace(/[̀-ͯ]/g, '')
   .toUpperCase().split(/[^A-Z0-9]+/).filter(Boolean);
 
-// Bestellnummer als zusammenhaengende Token-Folge in einem Referenztext suchen,
+// Bestellnummer als zusammenhängende Token-Folge in einem Referenztext suchen,
 // z. B. "BE-2026-0417" in "Ihre Bestellung BE-2026-0417 vom 14.09.2026"
 const containsSequence = (haystack, needle) => {
   if (needle.length === 0 || haystack.length < needle.length) return false;

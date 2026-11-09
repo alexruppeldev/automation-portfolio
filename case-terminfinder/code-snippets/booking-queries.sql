@@ -1,5 +1,5 @@
 
--- 1) Termine fuer den Suchzeitraum laden
+-- 1) Termine für den Suchzeitraum laden
 --    Zeitspalten werden explizit als UTC ISO gelesen, gerechnet wird danach in Europe/Berlin.
 SELECT "terminGruppe",
 kurzname,
@@ -13,7 +13,7 @@ WHERE ende >= $1::timestamptz
 ORDER BY beginn, ende;
 
 -- 2) Termin speichern, ein Aufruf je Teilnehmer (Query Batching: Independent)
---    RETURNING liefert die terminGruppe fuer die anschliessende Vollstaendigkeitspruefung.
+--    RETURNING liefert die terminGruppe für die anschließende Vollständigkeitsprüfung.
 INSERT INTO termine (
   "terminGruppe", kurzname, bezeichnung, beginn, ende, bemerkung
 ) VALUES (
@@ -22,7 +22,7 @@ INSERT INTO termine (
 RETURNING "terminGruppe";
 
 -- 3) Rollback bei Teilbuchung
---    Wurden nicht alle erwarteten Datensaetze gespeichert, wird die ganze Gruppe entfernt.
+--    Wurden nicht alle erwarteten Datensätze gespeichert, wird die ganze Gruppe entfernt.
 DELETE FROM termine
 WHERE "terminGruppe" = $1
 RETURNING "terminGruppe";
